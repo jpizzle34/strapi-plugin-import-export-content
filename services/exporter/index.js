@@ -10,7 +10,10 @@ async function getData(target, options, userAbility) {
     });
 
   // Filter content by permissions
-  const query = permissionsManager.queryFrom({}, PERMISSIONS.read);
+  const query = permissionsManager.queryFrom(
+    { pageSize: 10 },
+    PERMISSIONS.read
+  );
 
   // TODO: Add pageSize parameter
   const items = await strapi.entityService.find(
