@@ -12,6 +12,7 @@ async function getData(target, options, userAbility) {
   // Filter content by permissions
   const query = permissionsManager.queryFrom({}, PERMISSIONS.read);
 
+  // TODO: Add pageSize parameter
   const items = await strapi.entityService.find(
     { params: query },
     { model: uid }
