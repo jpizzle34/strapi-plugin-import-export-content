@@ -24,7 +24,13 @@ const BASE_OPTIONS = [
     label: "Remove TimeStamps",
     type: "boolean",
     defaultValue: false,
-  }
+  },
+  {
+    name: "export_all",
+    label: "Export All Records",
+    type: "boolean",
+    defaultValue: false,
+  },
 ];
 
 export default BASE_OPTIONS;
